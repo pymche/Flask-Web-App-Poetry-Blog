@@ -1,0 +1,115 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <div class="message-container">
+
+        <!-- <div class="form-container">
+            <h4>Send a message to Steve</h4>
+            <form class="message-form" method="POST" action="">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required>
+                <label for="message">Message</label>
+                <div class="text-container">
+                    <textarea type="text" name="message" id="message" required></textarea>
+                </div>
+                <input type="submit" value="Submit">
+            </form>
+        </div> -->
+
+        <div class="form-container">
+            <h4>Send a message to Steve</h4>
+            <form class="message-form" method="POST" action="">
+                {{ form.hidden_tag() }}
+                
+                <div class="form-field">
+                    {{ form.name.label }}
+                    {{ form.name }}
+                    {% if form.name.errors %}
+                        <div class="errors">
+                            {% for error in form.name.errors %}
+                                <p style="text-align: center; color: rgb(241, 82, 82); font-size: 0.8em;">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="form-field">
+                    {{ form.letter.label }}
+                    <div class="text-container">
+                        {{  form.letter }}
+                    </div>
+                    {% if form.letter.errors %}
+                        <div class="errors">
+                            {% for error in form.letter.errors %}
+                                <p style="text-align: center; color: rgb(241, 82, 82); font-size: 0.8em;">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+
+                {{ form.submit(class="boom") }}
+            </form>
+        </div>
+
+        <div class="received-container">
+            <h4>Message Board</h4>
+            {% for message in posts.items %}
+                <div class="received">
+
+                    {% if current_user.is_authenticated %}
+                        <div class="top-message">
+                            <p class="name">{{ message.name }}</p>
+                            <button type="button" class="btn btn-xs btn-outline-dark" data-toggle="modal" data-target="#deleteModal">
+                                <i class="material-icons w3-large">delete</i>
+                            </button>
+                        </div>
+                        <p class="date">{{ message.date.strftime('%B %d, %Y %H:%M') }}</p>
+                    {% else %}
+                    <div class="top-message">
+                        <p class="name">{{ message.name }}</p>
+                        <p class="date">{{ message.date.strftime('%B %d, %Y %H:%M') }}</p>
+                    </div>
+                        {% endif %}
+
+                    <p class="message">{{ message.letter }}</p>
+                </div>
+
+                <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document"> 
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                    <h5 class="modal-title" id="deleteModalLabel">Delete Post?</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span> 
+                                </button>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <form action="{{ url_for('messages.delete_message', message_id = message.id) }}" method="POST">
+                                    <input class ="btn btn-danger" type="submit" value="Delete"> 
+                                </form>
+                            </div> 
+                        </div>
+                    </div> 
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="pagination">
+            {% for page_num in posts.iter_pages(left_edge=2, right_edge=2, left_current=1, right_current=2) %} 
+                {% if page_num %}
+                    {% if posts.page == page_num %}
+                        <a class="btn btn-info mb-4 btn-md page" href="{{ url_for('messages.message', page=page_num) }}">{{ page_num }}</a> 
+                    {% else %}
+                        <a class="btn btn-outline-info mb-4 btn-md page" href="{{ url_for('messages.message', page=page_num) }}">{{ page_num }}</a>
+                    {% endif %}
+                {% else %}
+                    ...
+                {% endif %} 
+            {% endfor %}
+        </div>
+
+    </div>
+
+
+{% endblock content %}

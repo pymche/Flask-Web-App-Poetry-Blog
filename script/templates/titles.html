@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <div class="message-container">
+        <h4>Index</h4>
+        {% for post in posts.items %}
+            <a class="title" href="{{ url_for('posts.post', post_id=post.id)}}">{{ post.title }}</a>
+        {% endfor %}
+    </div>  
+
+{% endblock content %}

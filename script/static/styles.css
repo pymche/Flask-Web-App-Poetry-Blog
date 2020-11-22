@@ -1,0 +1,517 @@
+*{
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body{
+    background: white;
+    height: 100%;
+}
+
+/* Header, Nav Bar */
+
+.header{
+    width: 100%;
+    margin: 0;
+    position: fixed;
+    z-index: 1;
+}
+
+nav{
+    background: #668FAC;
+}
+
+nav .hamburger{
+    display: none;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav .links{
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+
+nav .nested-nav{
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav li{
+    flex: 1 1 0;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    font-size: 1.03em;
+    padding: 13px 50px;
+    letter-spacing: 0.08em;
+    transition: 0.3s;
+}
+
+.header nav ul.links a:hover{
+    color: #235f88;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.banner img{
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Poems */
+
+article{
+    margin: 8% 25%;
+}
+
+article h2, article h2 a{
+    color: black;
+    font-family: serif;
+    font-size: 70px;
+    transition: font-size 0.2s;
+}
+
+article h2 a:hover{
+    color: black;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 73px;
+}
+
+article p{
+    line-height: 1.6em;
+}
+
+article .date{
+    margin-left: 10px;
+    font-size: 0.8em;
+    color: grey;
+}
+
+article .poem{
+    margin-left: 10px;
+    letter-spacing: 0.5px;
+    white-space: pre-line;
+}
+
+.post-content{
+    padding-bottom: 120px;
+}
+
+/* About Page */
+
+.about{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 30px;
+}
+
+.about img{
+    width: 25%;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    border: #91CDEA solid 30px;
+    border-radius: 50%;
+    transition: width 1s, border 0.5s linear;
+}
+
+.about img:hover{
+    width: 23%;
+    border: #D4AEF3 solid 35px;
+    transform: scaleX(-1);
+}
+
+.about .description{
+    text-align: center;
+    margin: 0 20% 10%;
+}
+
+.about .description h3{
+    font-size: 2.5em;
+    font-style: italic;
+    color: #2E97CA;
+}
+
+.about .description .quote{
+    font-style: italic;
+}
+
+/* Forms */
+
+.message-container, .newpost-container, .login-container{
+    padding: 8% 20%;
+    display: flex;
+    flex: 1 1 0;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.message-container h4, .newpost-container h4, .login-container h4{
+    margin: 0 10px 50px;
+    font-size: 50px;
+    font-weight: 200;
+    color: rgb(113, 173, 197);
+    text-align: center;
+}
+
+.form-container{
+    margin-bottom: 120px;
+    width: 80%;
+}
+
+.form-container #letter, #content{
+    width: 95%;
+}
+
+.form-container #letter{
+    min-height: 300px;
+}
+
+.form-container #content{
+    min-height: 400px;
+}
+
+.text-container{
+    margin-left: 20px;
+    margin-top: 8px;
+    margin-bottom: 50px;
+}
+
+.form-container .message-form, .login-container .login-form{
+    border: rgb(238, 238, 238) solid 1px;
+    border-radius: 30px;
+    padding: 40px 30px;
+}
+
+.form-container label, .login-container label{
+    margin: 15px 23px;
+}
+
+input[type="text"], input[type="date"], input[type="submit"].boom,
+input[type="email"], input[type="password"], textarea{
+    display: block;
+    padding: 8px 15px;
+    margin: 0 20px 20px;
+}
+
+.received-container{
+    color: rgb(78, 78, 78);
+    width: 95%;
+}
+
+.received-container .name{
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.received-container .date{
+    font-size: 0.7em;
+    color: rgb(184, 184, 184);
+}
+
+.received-container .received{
+    margin-bottom: 50px;
+    border: rgb(238, 238, 238) solid 1px;
+    border-radius: 20px;
+    padding: 30px 40px;
+    line-height: 30px;
+}
+
+.message-container .title{
+    font-size: 1.4em;
+    text-decoration: none;
+    color: rgb(73, 73, 73);
+    line-height: 1.8em;
+    transition: 0.3s;
+}
+
+.message-container .title:hover{
+    font-size: 1.6em;
+    color: rgb(99, 88, 255);
+}
+
+.flash
+{
+    margin: 3% 10%;
+}
+
+/* Update/delete Icons & buttons */
+
+.top-message{
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-tool{
+    display: flex;
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+}
+
+.page{
+    margin: 0 5px;
+}
+
+/* Footer */
+
+.footer{
+    background:  #6789a1;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 30px;
+    width: 100%;
+}
+
+.footer .foot{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footer a{
+    text-decoration: none;
+    color: rgb(151, 161, 179);
+    margin-top: 6px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 0.9em;
+}
+
+.footer a:hover{
+    text-decoration: none;
+    color: rgb(214, 214, 214);
+}
+
+/* Tablet */
+
+@media screen and (max-width: 768px){
+
+    .banner{
+        max-width: 100%;
+        overflow: hidden;
+    }
+    
+    .banner img{
+        position: relative;
+        width: 130%;
+        left: -15%;
+        margin-top: 40px;
+    }
+
+    nav ul{
+        justify-content: center;
+    }
+
+    article{
+        margin: 20% 15%;
+    }
+
+    article h2{
+        font-size: 3.3em;
+    }
+
+    .about img{
+        width: 40%;
+        margin-top: 80px;
+        margin-bottom: 70px;
+        border-width: 25px;
+    }
+    
+    .about img:hover{
+        width: 43%;
+        border-width: 20px;
+    }
+
+    .about .description{
+        text-align: center;
+        margin: 0 10% 10%;
+    }
+
+    .message-container, .newpost-container, .login-container{
+        padding: 10% 10%;
+    }
+
+    .form-container .message-form, .login-container .login-form{
+        padding: 40px 10px;
+    }
+
+    input{
+        width: 85%;
+    }
+
+    .form-container, .login-container{
+        width: 100%;
+        margin-bottom: 80px;
+    }
+
+    .form-container #letter, #content{
+        width: 90%;
+    }
+
+    article h2, article h2 a{
+        font-size: 55px;
+    }
+
+    article h2 a:hover{
+        font-size: 58px;
+    }
+
+    .post-content{
+        padding-bottom: 110px;
+    }
+
+}
+
+/* Mobile */
+
+@media screen and (max-width: 415px){
+
+    .banner{
+        max-width: 100%;
+        overflow: hidden;
+    }
+    
+    .banner img{
+        position: relative;
+        width: 130%;
+        left: -16%;
+        margin-top: 35px;
+    }
+
+    nav .hamburger{
+        display: block;
+        height: 40px;
+        max-width: 100%;
+        padding: 15px;
+        background: url(img/hamburger.png) no-repeat 98% center;
+        background-size: 30px;
+        cursor: pointer;
+    }
+
+    /* When menu is closed */
+    nav ul{
+        display: block;
+        overflow: hidden;
+        /* Hide the original nav bar */
+        height: 0;
+    }
+
+    /* Styling when the links are open */
+    nav ul.open{
+        height: auto;
+    }
+
+    nav .links, nav .nested-nav{
+        display: block;
+    }
+
+    nav ul li{
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+
+    nav a{
+        color: white;
+        text-align: right;
+        font-size: 1.3em;
+        padding: 15px 12px;
+        display: block;
+        margin: 0;
+    }
+
+    article{
+        margin: 25% 8%;
+    }
+
+    article h2{
+        font-size: 3em;
+    }
+    
+    article p{
+        font-size: 1.1em;
+    }
+
+    .about img{
+        width: 47%;
+        margin-top: 50px;
+        margin-bottom: 60px;
+        border-width: 20px;
+    }
+    
+    .about img:hover{
+        width: 50%;
+        border-width: 15px;
+    }
+
+    .about .description{
+        text-align: center;
+        margin: 0 10% 10%;
+    }
+
+    .about .description p{
+        font-size: 1.1em;
+    }
+
+    .post-content{
+        padding-bottom: 100px;
+    }
+
+    .message-container, .newpost-container, .login-container{
+        padding: 10% 3%;
+    }
+
+    input{
+        width: 85%;
+    }
+
+    .form-container, .login-container{
+        width: 100%;
+        margin-bottom: 80px;
+    }
+
+    .form-container .message-form, .login-container .login-form{
+        padding: 4% 4%;
+        margin: 10px;
+    }
+
+    .form-container #letter, #content{
+        width: 98%;
+    }
+
+    .received-container .received{
+        padding: 4% 6%;
+        margin: 10px 0;
+    }
+
+    article h2, article h2 a{
+        font-size: 45px;
+    }
+
+    article h2 a:hover{
+        font-size: 48px;
+    }
+
+    
+
+}

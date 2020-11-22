@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <div class="newpost-container">
+        <div class="form-container">
+            <h4>{{ legend }}</h4>
+
+            <form class="message-form" method="POST" action="">
+                {{ form.hidden_tag() }}
+
+                <div class="form-field">
+                    {{ form.title.label }}
+                    {{ form.title }}
+                    {% if form.title.errors %}
+                        <div class="errors">
+                            {% for error in form.title.errors %}
+                                <p style="text-align: center; color: rgb(241, 82, 82); font-size: 0.8em;">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="form-field">
+                    {{ form.content.label }}
+                    <div class="text-container">
+                        {{  form.content }}
+                    </div>
+                    {% if form.content.errors %}
+                        <div class="errors">
+                            {% for error in form.content.errors %}
+                                <p style="text-align: center; color: rgb(241, 82, 82); font-size: 0.8em;">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+
+                {{  form.submit(class="boom") }}
+            </form>
+        </div>
+    </div>
+
+{% endblock content %}
