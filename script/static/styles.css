@@ -266,7 +266,6 @@ input[type="email"], input[type="password"], textarea{
 .pagination{
     display: flex;
     justify-content: center;
-    margin: 10% auto;
 }
 
 .page{
@@ -380,6 +379,10 @@ input[type="email"], input[type="password"], textarea{
 
     .post-content{
         padding-bottom: 110px;
+    }
+
+    .pagination{
+        margin: 5% auto;
     }
 
 }
@@ -515,6 +518,9 @@ input[type="email"], input[type="password"], textarea{
         font-size: 48px;
     }
 
+    .pagination{
+        margin: 10% auto;
+    }
     
 
 }
