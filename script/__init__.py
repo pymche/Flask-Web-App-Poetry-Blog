@@ -10,7 +10,9 @@ bcrypt = Bcrypt()
 login_manager = LoginManager()
 login_manager.login_view = 'users.login'
 login_manager.login_message_category = 'info'
-conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+
+# conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+
 
 def create_app(config_class=Config):
     app = Flask(__name__)
