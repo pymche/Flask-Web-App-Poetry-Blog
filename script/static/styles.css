@@ -316,7 +316,7 @@ input[type="email"], input[type="password"], textarea{
         position: relative;
         width: 130%;
         left: -15%;
-        margin-top: 40px;
+        margin-top: 50px;
     }
 
     nav ul{
@@ -405,7 +405,7 @@ input[type="email"], input[type="password"], textarea{
 
     nav .hamburger{
         display: block;
-        height: 40px;
+        height: 55px;
         max-width: 100%;
         padding: 15px;
         background: url(img/hamburger.png) no-repeat 98% center;
