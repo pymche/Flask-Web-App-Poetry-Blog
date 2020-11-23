@@ -124,6 +124,7 @@ article .poem{
 .about img{
     flex: 1 1 0;
     width: 25%;
+    height: auto;
     margin-top: 80px;
     margin-bottom: 50px;
     border: #91CDEA solid 30px;
@@ -334,6 +335,7 @@ input[type="email"], input[type="password"], textarea{
 
     .about img{
         width: 40%;
+        height: auto;
         margin-top: 80px;
         margin-bottom: 70px;
         border-width: 25px;
@@ -460,6 +462,7 @@ input[type="email"], input[type="password"], textarea{
 
     .about img{
         width: 47%;
+        height: auto;
         margin-top: 50px;
         margin-bottom: 60px;
         border-width: 20px;
