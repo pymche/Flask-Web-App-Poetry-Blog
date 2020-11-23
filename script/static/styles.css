@@ -133,7 +133,7 @@ article .poem{
 }
 
 .about img:hover{
-    width: 23%;
+    width: 28%;
     border: #D4AEF3 solid 35px;
     transform: scaleX(-1);
 }
@@ -342,7 +342,7 @@ input[type="email"], input[type="password"], textarea{
     }
     
     .about img:hover{
-        /* width: 43%; */
+        width: 43%;
         border-width: 20px;
     }
 
@@ -462,14 +462,14 @@ input[type="email"], input[type="password"], textarea{
 
     .about img{
         align-self: center;
-        width: 47%;
+        width: 60%;
         margin-top: 50px;
         margin-bottom: 50px;
         border-width: 20px;
     }
     
     .about img:hover{
-        width: 50%;
+        width: 63%;
         border-width: 15px;
     }
 
