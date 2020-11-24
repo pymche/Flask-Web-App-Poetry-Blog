@@ -236,6 +236,10 @@ input[type="email"], input[type="password"], textarea{
     line-height: 30px;
 }
 
+.received .message{
+    white-space: pre-line;
+}
+
 .message-container .title{
     font-size: 1.4em;
     text-decoration: none;
