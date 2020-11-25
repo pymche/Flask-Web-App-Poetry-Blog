@@ -1,4 +1,4 @@
-# Flask WebApp Poetry Blog
+# Flask Web App
 
 Poetry blog built with HTML, CSS, PostgreSQL, Python Flask, deployed in Heroku
 
